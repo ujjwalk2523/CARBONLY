@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Retire Carbon | Carbonly</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+  <div class="sidebar">
+    <h2>Carbonly</h2>
+    <ul>
+      <li><a href="dashboard.html">Dashboard</a></li>
+      <li><a href="#">Wallet</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="retire.html" class="active">Retire Carbon</a></li>
+      <li><a href="#">Swap</a></li>
+     <li><a href="account.html">Account</a></li>
+      <li><a href="contact.html">Contacts</a></li>
+      <li><a href="#">Buy Token</a></li>
+      <button id="logoutBtn">Logout</button>
+    </ul>
+  </div>
+
+  <div class="main-content">
+    <h1>Retire Carbon</h1>
+
+    <form class="retire-form">
+      <!-- Select Token -->
+      <label for="token">Select Token</label>
+      <select id="token" name="token" required>
+        <option value="" disabled selected>No tokens available</option>
+      </select>
+
+      <!-- Tokens + Date -->
+      <div class="form-row">
+        <div>
+          <label for="tokens">Number of tokens to retire (t CO₂e)</label>
+          <input type="number" id="tokens" name="tokens" placeholder="Enter the number of tonnes to retire" required>
+        </div>
+        <div>
+          <label for="retireDate">Date</label>
+          <input type="date" id="retireDate" name="retireDate" required>
+        </div>
+      </div>
+
+      <!-- Source -->
+      <label for="source">Primary source of tokens used for this retirement</label>
+      <input type="text" id="source" name="source" placeholder="Type the project name to search" required>
+
+      <!-- Description -->
+      <label for="reason">Description of reason for this Carbon-token retirement</label>
+      <textarea id="reason" name="reason" maxlength="200" placeholder="e.g. Offsetting international flights for trade conference, 6.5t CO₂e"></textarea>
+      <p class="char-limit"><span id="charCount">0</span>/200</p>
+
+      <!-- Terms Notice -->
+      <div class="terms-box">
+        <p>
+          By clicking <strong>'confirm'</strong> I understand that Carbonly tokens are intended for use with the Voluntary Carbon Market and I have read and accepted the 
+          <a href="#">Terms & Conditions</a>.
+        </p>
+      </div>
+
+      <!-- Confirm Button -->
+      <button type="submit" class="confirm-btn">Confirm →</button>
+    </form>
+  </div>
+
+  <script>
+    // Character counter
+    const reason = document.getElementById("reason");
+    const charCount = document.getElementById("charCount");
+    reason.addEventListener("input", () => {
+      charCount.textContent = reason.value.length;
+    });
+  </script>
+</body>
+</html>

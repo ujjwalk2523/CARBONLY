@@ -1,0 +1,149 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sign Up - Carbonly</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="style.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Font Awesome Icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="signup-body">
+<body>
+<nav>
+  <div class="logo">
+    Carbonly
+    <img src="assets/card.png" alt="Card Icon" class="logo-card">
+  </div>
+  <div class="links">
+     <a href="index.html#">Home</a>
+    <a href="index.html#how">How it Works</a>
+    <a href="index.html#about">About</a>
+    <a href="index.html#">Articles</a>
+    <a href="contact.html">Contact</a>
+  </div>
+  <div class="auth">
+    <a href="login.html" class="login">Login</a>
+    <a href="signup.html" class="signup">Sign Up</a>
+  </div>
+</nav>
+
+<!-- ✅ Signup Page Split Layout -->
+<div class="signup-page">
+
+  <!-- Left Branding Section -->
+  <div class="signup-left">
+    <h1 class="brand-title">
+      Carbonly 
+      <img src="assets/card.png" alt="Carbon Credit Card" class="brand-card">
+    </h1>
+ 
+    <p class="brand-quote">
+      “Together we are redefining value — turning sustainability into wealth, 
+      connecting communities across the globe, and building a healthier 
+      planet for the future generations.”
+    </p>
+
+    <div class="brand-block">
+      <h3>🌱 Build wealth while reforesting the world</h3>
+      <p>Earn Carbonly Credits (XCC) for every gram of carbon your trees drawdown.</p>
+    </div>
+
+    <div class="brand-block"><br>
+      <h3>🌍 Connect to global carbon markets</h3>
+      <p>Sell your XCC directly to sustainable companies and organizations worldwide.</p>
+    </div>
+
+    <div class="brand-block"><br>
+      <h3>💰 Turn idle assets into passive income</h3>
+      <p>Your trees are already working — now you can turn their carbon capture into real, carbon-backed money.</p>
+    </div>
+  </div>
+
+  <!-- Right Form Section -->
+  <div class="signup-right">
+    <div class="auth-container">
+      <h2>Create Account</h2>
+      <form class="auth-form" action="/signup" method="POST">
+        
+        <input type="text" name="name" placeholder="Full Name" required>
+        <input type="email" name="email" placeholder="Email" required>
+        
+        <!-- Country Dropdown -->
+        <select name="country" required>
+          <option value="">Select Country</option>
+          <option value="India">India</option>
+          <option value="United States">United States</option>
+          <option value="United Kingdom">United Kingdom</option>
+          <option value="Canada">Canada</option>
+          <option value="Australia">Australia</option>
+          <option value="Germany">Germany</option>
+          <option value="Japan">Japan</option>
+        </select>
+        
+        <input type="password" name="password" placeholder="Password" required>
+        
+        <!-- Terms Checkbox -->
+        <label class="terms">
+          <input type="checkbox" required>
+          I agree to the <a href="#" id="terms-link">Terms & Conditions</a>
+        </label>
+        
+        <button type="submit">Sign Up</button>
+      </form>
+      <p>Already have an account? <a href="login.html">Login</a></p>
+    </div>
+  </div>
+
+</div>
+
+<!-- ✅ Terms Modal -->
+<div id="termsModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Terms & Conditions</h2>
+    <p>
+      Welcome to Carbonly. By creating an account, you agree to the following:
+    </p>
+    <ul>
+      <li>Use the platform responsibly and in compliance with all applicable laws.</li>
+      <li>Respect intellectual property, cultural values, and sustainability efforts.</li>
+      <li>Do not engage in fraudulent activities or misuse of carbon credits.</li>
+      <li>Your account and personal data are handled under our Privacy Policy.</li>
+      <li>Carbonly may update these terms from time to time; continued use means acceptance of the new terms.</li>
+      <li>All financial transactions are final unless otherwise stated in our Refund Policy.</li>
+      <li>Disputes will be resolved under the jurisdiction of our governing laws.</li>
+    </ul>
+    <p>
+      These terms ensure trust, transparency, and sustainability for all our members. 
+      Please read them carefully before continuing.
+    </p>
+  </div>
+</div>
+
+<script>
+  // Modal script
+  const modal = document.getElementById("termsModal");
+  const link = document.getElementById("terms-link");
+  const closeBtn = document.querySelector(".close");
+
+  link.onclick = function(e) {
+    e.preventDefault();
+    modal.style.display = "block";
+  }
+  closeBtn.onclick = function() {
+    modal.style.display = "none";
+  }
+  window.onclick = function(e) {
+    if (e.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+</script>
+<script src="auth.js"></script>
+</body>
+</html>

@@ -1,0 +1,589 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  background: #f5f7fa;
+  color: #333;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 240px;
+  background: #101820;
+  color: #fff;
+  padding: 100px 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+
+.sidebar h2 {
+  text-align: left;
+  margin-bottom: 30px;
+  font-size: 34px;
+  font-weight: bold;
+  color: #34d1df;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar ul li {
+  margin: 18px 0;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  color: #ddd;
+  font-size: 16px;
+  padding: 10px;
+  display: block;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+.sidebar ul li a:hover {
+  background: #20df80;
+  color: #101820;
+  font-weight: 600;
+}
+
+/* Main Content */
+.main-content {
+  margin-left: 240px;
+  padding: 20px;
+  flex-grow: 1;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+header h1 {
+  font-size: 26px;
+  font-weight: bold;
+}
+
+#connectWallet {
+  background: #20df80;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  color: #101820;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#connectWallet:hover {
+  background: #000000;
+  color: white;
+}
+
+/* Stats Cards */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.card p {
+  font-size: 22px;
+  font-weight: bold;
+  color: #20df80;
+}
+
+/* Buttons */
+button {
+  padding: 12px 20px;
+  border: none;
+  background: #20df80;
+  color: #101820;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #000000;
+  color: white;
+}
+/* Banner */
+.banner {
+  position: relative;
+  width: 100%;
+  height: 260px;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(75%); /* darken a bit so text is visible */
+}
+
+.banner-text {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  color: white;
+}
+
+.banner-text h1 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.banner-text button {
+  background: #20df80;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.banner-text button:hover {
+  background: #000000;
+  color: white;
+}
+/* Transactions List */
+.transactions {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  margin-top: 20px;
+}
+
+.transactions h3 {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.transactions ul {
+  list-style: none;
+  padding: 0;
+}
+
+.transactions li {
+  padding: 8px;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+  color: #555;
+}
+
+.transactions li:last-child {
+  border-bottom: none;
+}
+
+
+
+
+/* Sidebar logout button */
+
+#logoutBtn {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  background-color: #f44336; /* red */
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#logoutBtn:hover {
+  background-color: #d32f2f;
+}
+/* -----------------------------
+   Project Wizard (Projects.html)
+------------------------------ */
+
+/* Step progress indicator */
+.steps {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+  padding: 0;
+  list-style: none;
+}
+
+.steps .step {
+  flex: 1;
+  text-align: center;
+  font-size: 14px;
+  padding: 10px;
+  border-bottom: 3px solid #ccc;
+  color: #777;
+  position: relative;
+}
+
+.steps .step.active {
+  border-color: #2ec4b6; /* your Carbonly green accent */
+  color: #2ec4b6;
+  font-weight: 600;
+}
+
+/* Form container */
+form#projectForm {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  margin-top: 20px;
+}
+
+/* Hide inactive steps */
+.form-step {
+  display: none;
+}
+.form-step.active {
+  display: block;
+}
+
+/* Input fields */
+form#projectForm label {
+  display: block;
+  margin: 15px 0 5px;
+  font-weight: 500;
+  color: #333;
+}
+
+form#projectForm input[type="text"],
+form#projectForm input[type="date"],
+form#projectForm textarea,
+form#projectForm input[type="file"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: border 0.2s;
+}
+
+form#projectForm input:focus,
+form#projectForm textarea:focus {
+  border-color: #2ec4b6;
+  outline: none;
+}
+
+/* Checkboxes */
+form#projectForm input[type="checkbox"] {
+  margin-right: 8px;
+  accent-color: #2ec4b6;
+}
+
+/* Navigation buttons */
+.form-navigation {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-navigation button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#prevBtn {
+  background: #f0f0f0;
+  color: #333;
+}
+#prevBtn:hover {
+  background: #ddd;
+}
+
+#nextBtn {
+  background: #2ec4b6;
+  color: #fff;
+}
+#nextBtn:hover {
+  background: #1aa89a;
+}
+/* -----------------------------
+   Finalise Section (Signature)
+------------------------------ */
+
+.signature-box {
+  margin-top: 20px;
+}
+
+.signature-box canvas {
+  border: 2px dashed #ccc;
+  border-radius: 8px;
+  background: #fafafa;
+  cursor: crosshair;
+}
+
+.signature-actions {
+  margin-top: 10px;
+}
+
+.signature-actions button {
+  padding: 6px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  background: #f0f0f0;
+  transition: background 0.2s;
+}
+
+.signature-actions button:hover {
+  background: #ddd;
+}
+/* -----------------------------
+   Success Step
+------------------------------ */
+
+.form-step h2 {
+  margin-bottom: 15px;
+  font-size: 24px;
+  color: #2ec4b6;
+}
+
+.form-step p {
+  font-size: 16px;
+  color: #444;
+  line-height: 1.5;
+}
+
+.success-image {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.success-image img {
+  max-width: 220px;
+  border-radius: 12px;
+}
+
+
+
+/* Make map take full width inside the form */
+#map {
+  width: 100% !important;
+  height: 400px;
+  border-radius: 12px;
+  margin-top: 15px;
+}
+
+
+
+/* Retire Carbon Form */
+.retire-form {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.retire-form label {
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.retire-form input,
+.retire-form select,
+.retire-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.retire-form textarea {
+  resize: none;
+  height: 100px;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+}
+
+.form-row > div {
+  flex: 1;
+}
+
+.char-limit {
+  font-size: 12px;
+  color: #666;
+  text-align: right;
+  margin-top: -10px;
+}
+
+.terms-box {
+  background: #e6f7fb;
+  border: 1px solid #b5e3ec;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 13px;
+  color: #333;
+}
+
+.terms-box a {
+  color: #2ec4b6;
+  text-decoration: underline;
+}
+
+.confirm-btn {
+  background: #2ec4b6;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.confirm-btn:hover {
+  background: #1aa89a;
+}
+/* ----------------------------
+   ACCOUNT PAGE STYLES
+----------------------------- */
+
+/* Main content heading */
+.main-content h2 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: #222;
+  font-weight: 600;
+}
+
+/* Account form container */
+.account-form {
+  background: #f9fafc;
+  padding: 25px;
+  border-radius: 10px;
+  border: 1px solid #eee;
+  margin-top: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+/* Rows in form */
+.form-row {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 18px;
+}
+
+/* Each input group */
+.form-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Labels */
+.form-group label {
+  font-size: 14px;
+  margin-bottom: 6px;
+  color: #555;
+  font-weight: 500;
+}
+
+/* Inputs and dropdowns */
+.form-group input,
+.form-group select {
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  background: #fff;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Hover / Focus states */
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #43c59e;
+  box-shadow: 0 0 4px rgba(67, 197, 158, 0.4);
+  outline: none;
+}
+
+/* Disabled / readonly */
+.form-group input[readonly] {
+  background: #f0f0f0;
+  color: #777;
+  cursor: not-allowed;
+}
+
+/* Save button */
+.main-save {
+  width: 100%;
+  padding: 12px;
+  background: #43c59e;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  margin-top: 10px;
+}
+
+.main-save:hover {
+  background: #36a988;
+}
+
+/* Responsive: stack fields on smaller screens */
+@media (max-width: 768px) {
+  .form-row {
+    flex-direction: column;
+  }
+}
+
+
+
+
+

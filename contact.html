@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Carbonly</title>
+
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar">
+  <div class="logo">
+    Carbonly
+    <img src="assets/card.png" alt="Card Icon" class="logo-card">
+  </div>
+  <div class="links">
+    <a href="index.html">Home</a>
+    <a href="index.html#how">How it Works</a>
+    <a href="index.html#about">About</a>
+    <a href="index.html#articles">Articles</a>
+    <a href="contact.html">Contact</a>
+  </div>
+<div class="auth">
+  <a href="login.html" class="login">Login</a>
+  <a href="signup.html" class="signup">Sign Up</a>
+</div>
+
+</nav>
+
+
+  <!-- Contact Form Section -->
+  <section class="contact">
+    <div class="contact-container">
+      <h2>Contact Us</h2>
+      <p>We’d love to hear from you! Please fill out the form below.</p>
+
+      <form class="contact-form" id="contact-form">
+        <input type="text" name="from_name" placeholder="Your Name" required>
+        <input type="email" name="reply_to" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit" id="send-btn">Send Message</button>
+      </form>
+      <p id="form-status"></p>
+    </div>
+  </section>
+
+  <!-- EmailJS -->
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script>
+    (function(){
+      emailjs.init("ryVrl-v48Ycy_G1N-"); 
+      // Example: emailjs.init("ryVrl-v48Ycy_G1N-");
+    })();
+  </script>
+
+  <script src="script.js"></script>
+</body>
+</html>

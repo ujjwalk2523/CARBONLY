@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Projects | Carbonly</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="style1.css">
+  <script defer src="projects.js"></script>
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet-draw/dist/leaflet.draw.css" />
+</head>
+<body>
+  <div class="sidebar">
+    <h2>Carbonly</h2>
+    <ul>
+      <li><a href="dashboard.html">Dashboard</a></li>
+      <li><a href="#">Wallet</a></li>
+      <li><a href="projects.html" class="active">Projects</a></li>
+     <li><a href="retire.html">Retire Carbon</a></li>
+      <li><a href="#">Swap</a></li>
+      <li><a href="account.html">Account</a></li>
+      <li><a href="contact.html">Contacts</a></li>
+      <li><a href="#">Buy Token</a></li>
+      <button id="logoutBtn">Logout</button>
+    </ul>
+  </div>
+
+  <div class="main-content">
+    <h1>Create Project</h1>
+    
+    <!-- Progress Bar -->
+    <div class="steps">
+      <span class="step active">01 Details</span>
+      <span class="step">02 Ownership</span>
+      <span class="step">03 Boundary</span>
+      <span class="step">04 Finalise</span>
+      <span class="step">05 Success</span>
+    </div>
+
+    <!-- Step 1: Details -->
+    <form id="projectForm">
+      <div class="form-step active">
+        <h2>Project Details</h2>
+        <label>Project Name</label>
+        <input type="text" name="projectName" required>
+        
+        <label>Project Description</label>
+        <textarea name="projectDescription" required></textarea>
+        
+        <label>
+          <input type="checkbox" required>
+          I confirm any wood harvested will be used for durable products ensuring longer term carbon storage.
+        </label>
+      </div>
+
+      <!-- Step 2: Ownership -->
+      <div class="form-step">
+        <h2>Site Ownership</h2>
+        <label>Project Address</label>
+        <input type="text" name="projectAddress" required>
+        
+        <label>Start Date</label>
+        <input type="date" name="startDate" required>
+        
+        <label>
+          <input type="checkbox" required>
+          I have ownership/approval from the land owner to manage forests.
+        </label>
+        <label>
+          <input type="checkbox" required>
+          This land area will exclusively benefit from Carbonly revenue programs.
+        </label>
+      </div>
+
+   <!-- Step 3: Boundary -->
+<div class="form-step">
+  <h2>Select Project Boundary</h2>
+  <p>Draw your project area boundary on the map. You can draw a polygon or rectangle.</p>
+  
+  <div id="map" style="height: 400px; border-radius: 12px;"></div>
+
+  <!-- Hidden field to capture boundary -->
+  <textarea id="boundaryCoords" name="boundary" readonly style="margin-top:10px; width:100%; height:100px;"></textarea>
+</div>
+
+
+      <!-- Step 4: Finalise -->
+    
+<div class="form-step">
+  <h2>Finalise</h2>
+  <p>Please review and confirm before submitting.</p>
+
+  <label>
+    <input type="checkbox" required>
+    I agree to the <strong>terms & conditions</strong>, including the historical fee structure.
+  </label>
+
+  <div class="signature-box">
+    <p>Draw your signature below:</p>
+    <canvas id="signaturePad" width="500" height="200"></canvas>
+    <div class="signature-actions">
+      <button type="button" id="clearSignature">Clear</button>
+    </div>
+  </div>
+</div>
+
+     <!-- Step 5: Success -->
+<div class="form-step">
+  <h2>🎉 Project Created</h2>
+  <p>Congratulations! You have created your project. The Carbonly team will crunch the data and you'll be notified within <strong>72 hours</strong> of the results.</p>
+  
+  <div class="success-image">
+    <img src="assets/tree.png" alt="Success Tree" />
+  </div>
+</div>
+
+      <!-- Navigation Buttons -->
+      <div class="form-navigation">
+        <button type="button" id="prevBtn">Back</button>
+        <button type="button" id="nextBtn">Next</button>
+      </div>
+    </form>
+  </div>
+    <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/leaflet-draw/dist/leaflet.draw.js"></script>
+</body>
+</html>
+

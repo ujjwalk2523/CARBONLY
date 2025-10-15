@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard | Carbonly</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="style1.css">
+  <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+  <script defer src="dashboard.js"></script>
+</head>
+<body>
+  <div class="sidebar">
+    <h2>Carbonly</h2>
+    <ul>
+      <li><a href="dashboard.html">Dashboard</a></li>
+      <li><a href="#">Wallet</a></li>
+      <li><a href="projects.html">Projects</a></li>
+       <li><a href="retire.html">Retire Carbon</a></li>
+      <li><a href="#">Swap</a></li>
+      <li><a href="account.html">Account</a></li>
+      <li><a href="contact.html">Contacts</a></li>
+      <li><a href="#">Buy Token</a></li>
+  <button id="logoutBtn">Logout</button>
+    </ul>
+  </div>
+
+  <div class="main-content">
+  
+ <!-- Banner Section -->
+<div class="banner">
+  <img src="assets/banner.jpg" alt="Banner Background">
+  <div class="banner-text">
+    <h1>Welcome <span id="username">Ujjwal</span></h1>
+    <button id="connectWallet">Connect Wallet</button>
+  
+  </div>
+</div>
+
+
+  <!-- Stats Section -->
+  <section class="stats">
+    <div class="card">
+      <h3>CTT Balance</h3>
+      <p id="XCCBalance">0</p>
+    </div>
+    <div class="card">
+      <h3>Total Land (ha)</h3>
+      <p id="totalLand">0</p>
+    </div>
+    <div class="card">
+      <h3>Total Projects</h3>
+      <p id="totalProjects">0</p>
+    </div>
+    <div class="card">
+      <h3>Total CO₂ Offset</h3>
+      <p id="totalCO2">0</p>
+    </div>
+  </section>
+
+    <section>
+      <button onclick="createProject()">Create First Project</button>
+    </section>
+  </div>
+</body>
+</html>

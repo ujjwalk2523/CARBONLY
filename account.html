@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Account | Carbonly</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="style1.css">
+  <script defer src="account.js"></script>
+</head>
+<body>
+  <div class="sidebar">
+    <h2>Carbonly</h2>
+    <ul>
+      <li><a href="dashboard.html">Dashboard</a></li>
+      <li><a href="#">Wallet</a></li>
+       <li><a href="projects.html">Projects</a></li>
+      
+       <li><a href="retire.html">Retire Carbon</a></li>
+      <li><a href="#">Swap</a></li>
+      <li><a href="account.html" class="active">Account</a></li>
+      <li><a href="contact.html">Contacts</a></li>
+      <li><a href="#">Buy Token</a></li>
+      <button id="logoutBtn">Logout</button>
+    </ul>
+  </div>
+
+  <div class="main-content">
+    <h2>Account</h2>
+    <form id="accountForm" class="account-form">
+      <div class="form-row">
+        <div class="form-group">
+          <label>First Name</label>
+          <input type="text" id="firstName">
+        </div>
+        <div class="form-group">
+          <label>Last Name</label>
+          <input type="text" id="lastName">
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>Job Title</label>
+          <input type="text" id="jobTitle">
+        </div>
+        <div class="form-group">
+          <label>Company Name</label>
+          <input type="text" id="companyName">
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" id="email" readonly value="ujjwalbhumi0@gmail.com">
+        </div>
+        <div class="form-group">
+          <label>Phone</label>
+          <input type="text" id="phone">
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>Password</label>
+          <input type="password" id="password">
+        </div>
+        <div class="form-group">
+          <label>Language</label>
+          <select id="language">
+            <option>English</option>
+          </select>
+        </div>
+      </div>
+
+      <button type="submit" class="main-save">Save</button>
+    </form>
+  </div>
+</body>
+</html>

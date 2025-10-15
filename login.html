@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login - Carbonly</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="style.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="login-body">
+
+  <!-- Auth Box -->
+  <div class="auth-container login-box">
+    
+    <!-- Logo inside box -->
+    <div class="login-logo">
+      Carbonly 
+      <img src="assets/card1.png" alt="Carbonly Logo">
+    </div>
+
+    <h2>Login</h2>
+    <form class="auth-form" action="/login" method="POST">
+      <input type="email" name="email" placeholder="Email" required>
+      <input type="password" name="password" placeholder="Password" required>
+      <button type="submit">Login</button>
+    </form>
+    <p>Don’t have an account? <a href="signup.html">Sign Up</a></p>
+  </div>
+  <script src="auth.js"></script>
+</body>
+</html>
