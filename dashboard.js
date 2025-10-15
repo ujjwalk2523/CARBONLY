@@ -476,7 +476,7 @@ async function loadDashboard(account) {
     document.getElementById("XCCBalance").innerText = `${formattedBalance} ${symbol}`;
 
     // 2️⃣ Fetch Projects from backend
-    const res = await fetch(`http://localhost:5000/projects/${account}`);
+    const res = await fetch(`https://carbonly.onrender.com/projects/${account}`);
     const projects = await res.json();
 
     // Total Projects
